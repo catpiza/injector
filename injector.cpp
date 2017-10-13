@@ -115,7 +115,7 @@ BOOL Inject(DWORD pID, const char * DLL_NAME)
   // Запись имени строки нашей дллки в выделенной заранее памяти
   WriteProcessMemory(Proc, (LPVOID)RemoteString, DLL_NAME, strlen(DLL_NAME), NULL);
 
-  // Загрузка длд
+  // Загрузка длл
   CreateRemoteThread(Proc, NULL, NULL, (LPTHREAD_START_ROUTINE)LoadLibraryEx, (LPVOID)RemoteString, NULL, NULL);
 
   CloseHandle(Proc);
