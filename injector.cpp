@@ -87,8 +87,6 @@ int main(int argc, char * argv[])
         puts("DLL Loaded!");
     }
 
-    _getch();
-  return 0;
 }
 
 BOOL Inject(DWORD pID, const char * DLL_NAME)
